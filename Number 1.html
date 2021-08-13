@@ -1,0 +1,28 @@
+<script>
+    // number 1 section a check prime number and memoized
+
+function checkPrime(number){
+	if (number<= 1)
+		 {return false;
+	} else {for (let i = 2; i < number; i++){
+	if (number % i==0) {
+		return false;
+	}
+	}
+		return true;
+	}
+} 
+console.log(checkPrime(5))
+
+//section b memoization of the above code
+const isPrime = number =>{
+	let result = 0;
+	for( let i = 2; i < number; i++){
+		for(let m = 2; m <= number; m ++){
+			result ++;
+		}
+	}
+		return result;
+}
+console.log(isPrime(3))
+</script>
